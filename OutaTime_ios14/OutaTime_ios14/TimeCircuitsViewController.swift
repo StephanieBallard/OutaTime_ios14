@@ -21,6 +21,14 @@ class TimeCircuitsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func setDestinationTimeButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func travelBackButton(_ sender: UIButton) {
+    }
+    
+    
 
     /*
     // MARK: - Navigation

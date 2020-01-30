@@ -94,12 +94,18 @@
                                                 <color key="backgroundColor" red="1" green="0.74117647060000003" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="SET DESTINATION TIME"/>
+                                                <connections>
+                                                    <action selector="setDestinationTimeButton:" destination="fVH-JB-xIl" eventType="touchUpInside" id="j8M-3Y-TXr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZF-bs-4fw">
                                                 <rect key="frame" x="35.5" y="38" width="104" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.74117647060000003" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="TRAVEL BACK"/>
+                                                <connections>
+                                                    <action selector="travelBackButton:" destination="fVH-JB-xIl" eventType="touchUpInside" id="XiU-b6-6zb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
