@@ -10,7 +10,7 @@
         <!--Time Circuits View Controller-->
         <scene sceneID="jSy-cm-Mue">
             <objects>
-                <viewController id="fVH-JB-xIl" customClass="TimeCircuitsViewController" customModule="OutaTime_ios14" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fVH-JB-xIl" customClass="TimeCircuitsViewController" customModule="OutOfTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bZ1-D4-j2E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +105,7 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="TRAVEL BACK"/>
                                                 <connections>
+                                                    <action selector="travelBack:" destination="fVH-JB-xIl" eventType="touchUpInside" id="BX0-vx-iyB"/>
                                                     <action selector="travelBackButton:" destination="fVH-JB-xIl" eventType="touchUpInside" id="XiU-b6-6zb"/>
                                                 </connections>
                                             </button>
@@ -122,9 +123,13 @@
                     </view>
                     <connections>
                         <outlet property="destinationTime" destination="wxg-9B-Kxb" id="D9K-gG-HDW"/>
+                        <outlet property="destinationTimeLabel" destination="wxg-9B-Kxb" id="LQx-bQ-Blu"/>
                         <outlet property="lastTimeDeparted" destination="e3c-zL-fX0" id="CtL-iX-7Pe"/>
+                        <outlet property="lastTimeDepartedLabel" destination="e3c-zL-fX0" id="ZPJ-YA-MwW"/>
                         <outlet property="presentTime" destination="gKp-V5-pas" id="zw7-22-UYe"/>
+                        <outlet property="presentTimeLabel" destination="gKp-V5-pas" id="hZv-Ty-9Bq"/>
                         <outlet property="speed" destination="GaR-10-kj8" id="16o-N8-JaD"/>
+                        <outlet property="speedLabel" destination="GaR-10-kj8" id="J1z-SP-X5v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJh-bg-Ail" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -134,7 +139,7 @@
         <!--Date Picker View Controller-->
         <scene sceneID="34a-9r-5rY">
             <objects>
-                <viewController id="MbU-nL-7hd" customClass="DatePickerViewController" customModule="OutaTime_ios14" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MbU-nL-7hd" customClass="DatePickerViewController" customModule="OutOfTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i4B-t9-OcW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,19 +158,20 @@
                     <toolbarItems>
                         <barButtonItem systemItem="cancel" id="cmi-nH-ZL3">
                             <connections>
-                                <action selector="cancelButton:" destination="MbU-nL-7hd" id="qFX-oI-SUv"/>
+                                <action selector="cancelTapped:" destination="MbU-nL-7hd" id="Q0K-VU-MDv"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem systemItem="flexibleSpace" id="wxo-1J-AGb"/>
                         <barButtonItem title="Item" systemItem="done" id="SfX-QW-M6n">
                             <connections>
-                                <action selector="doneButton:" destination="MbU-nL-7hd" id="O2t-Ia-1ZE"/>
+                                <action selector="doneTapped:" destination="MbU-nL-7hd" id="CRj-Vp-Qy3"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="datePicker" destination="CWp-Lg-Lq8" id="BtU-69-Uol"/>
+                        <outlet property="cancelTapped" destination="cmi-nH-ZL3" id="0pK-SC-6ms"/>
+                        <outlet property="datePicker" destination="CWp-Lg-Lq8" id="Lvq-em-onP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqZ-dc-Ite" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

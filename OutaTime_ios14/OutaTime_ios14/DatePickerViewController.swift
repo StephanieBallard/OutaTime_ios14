@@ -27,6 +27,8 @@ class DatePickerViewController: UIViewController, DatePickerDelegate {
     
     //For the done IBAction, call the delegate method to inform the delegate of the new date chosen by the user. Also call that same dismiss method from above after the delegate method call. This will inform the delegate of the change, and then dismiss the view, revealing the time circuits underneath.
     @IBAction func doneButton(_ sender: UIBarButtonItem) {
+        
+        delegate?.destinationDateWasChosen(date: datePicker.date)
 //        doneButton.delegate = self
 //        doneButton.dataSource = self
 //        doneButton.delegate = self
